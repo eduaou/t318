@@ -70,14 +70,22 @@ div.package_header {
 }
 
 .overlay-credit {
-    text-align: center;
-    margin-top: 20px;
-    z-index: 9;
-    position: fixed;
-    bottom: 10px;
-    right: 15px;
-    font-size: 10px;
-}
+      text-align: center;
+      margin-top: 20px;
+      z-index: 9;
+      position: fixed;
+      bottom: 10px;
+      right: 15px;
+      font-size: 10px;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+      }
+      .scroll-show {
+      opacity: 1; /* Fully visible when scrolling down */
+      }
+      .scroll-hide {
+      opacity: 0; /* Hidden when scrolling up */
+      }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 
   
@@ -314,16 +322,17 @@ div.package_header {
 </div>
 
 <span class="overlay-credit">
-  <p style="text-align: center;
-    margin-top: 20px;
-    z-index: 9;
-    position: fixed;
-    bottom: 10px;
-    right: 15px;
-    font-size: 10px;">Made with ♥ by</p>
-<a href="https://api.whatsapp.com/send?phone=966547677832" target="_blank">
-Abdusamad Mohamed Nur Tahir</a>
- </span>
+      <p style="text-align: center;
+        margin-top: 20px;
+        z-index: 9;
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        font-size: 10px;">Made with <span style="color: red;">♥</span> by</p>
+      <a style="color: black; cursor: pointer;text-decoration: none;" href="https://api.whatsapp.com/send?phone=966547677832" target="_blank">
+      Abdusamad Mohamed Nur Tahir</a>
+    </span>
+    <script src="https://rawcdn.githack.com/eduaou/hosting/refs/heads/main/scroll-show-hide.js"></script>
 </body>
 
 </html>
